@@ -70,7 +70,7 @@ a {
 
 /* Icon Button */
 .icon-button {
-  background-color: #cfcfcf;
+  background-color: #afafaf;
   border-radius: 50%;
   padding: 5px;
   margin: 2px;
@@ -81,6 +81,11 @@ a {
 
 .icon-button:hover {
   filter: brightness(1.1);
+}
+
+.icontext {
+  font-size: 0.8rem;
+  font-weight: bold;
 }
 
 .icon-button svg { 
@@ -97,6 +102,7 @@ a {
   min-width: 200px;
   transform: translateX(-40%) translateY(10%);
   padding: 1rem;
+  z-index: 10;
 }
 
 .menu {
@@ -149,31 +155,10 @@ align-items: center;
 }
 
 .icon3d {
+  margin: 5px;
   padding: 10px;
   color: #000;
 }
-
-.icon3d:hover {
-  animation: icond3 200ms infinite;
-}
-
-@keyframes icond3 {
-  0% {
-    text-shadow: 5px 4px #be1c1c, -5px -6px #000AA9;
-  }
-  25% {
-    text-shadow: -5px -6px #be1c1c, 5px 4px #000AA9;
-  }
-  50% {
-    text-shadow: 5px -4px #be1c1c, -8px 4px #000AA9;
-  }
-  75% {
-    text-shadow: -8px -4px #be1c1c, -5px -4px #000AA9;
-  }
-  100% {
-    text-shadow: -5px 0 #be1c1c, 5px -4px #000AA9;
-  }
-  }
 
 /* About Us Grid */
 
@@ -263,14 +248,77 @@ align-items: center;
   flex-direction: column;
   align-items: center;
   width: 35%;
+  min-height: 200px;
   padding: 2rem;
   margin: 2rem;
   background-color: #e2e2e2;
 }
 .contact-icon {
-  margin: 5px;
+  margin: 1rem;
 }
 
 .contact-desc {
-  margin: 5px;
+  margin: 1rem;
+}
+
+/* Home */
+
+.carousel-container {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  width: 95%;
+}
+
+.slide-icon {
+  background-color: #afafaf;
+  border-radius: 40%;
+  padding: 5px;
+  margin: 2px;
+  display: flex;
+  font-size: 1.3rem;
+  font-weight: bolder;
+  align-self: center;
+  justify-content: center;
+}
+
+.slider-card {  
+  height: 80vh;
+  width: 100%;
+  margin: 15px;
+}
+
+.slide01 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #3f3f3f;
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+  color: rgb(109, 0, 0);
+  font-size: 5em;
+}
+
+.slide02 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #250000;
+  width: 100%;
+  height: 100%;
+  color: rgb(5, 160, 0);
+  font-size: 2em;
+}
+
+.slide03 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(https://images.hdqwalls.com/wallpapers/minimal-landscape-4k-ro.jpg);
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  color: rgb(180, 0, 180);
+  font-size: 7em;
 }

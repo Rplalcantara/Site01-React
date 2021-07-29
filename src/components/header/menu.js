@@ -40,7 +40,7 @@ function NavItem(props) {
     <li className="nav-item">
       <a onClick={() => setOpen(!open)}>
         <span className="icon-button">{props.icon}</span>
-        <span>Menu</span>
+        {<span className="icontext">Menu</span>}
       </a>
       {open && props.children}
     </li>
