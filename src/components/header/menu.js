@@ -10,11 +10,9 @@ function Menu() {
   return (
       <div className="header-container">
     <HeaderImg/>
-    <Navbar>
       <NavItem icon={<MenuIcon />}>
-      <DropdownMenu></DropdownMenu>
-      </NavItem>
-    </Navbar>
+      <DropdownMenu/>
+      </NavItem>    
     </div>
   );
 }
@@ -23,14 +21,6 @@ function HeaderImg() {
     return (
         <img className="header-image" src={headerLogo} alt="Logo"></img>
     )
-}
-
-function Navbar(props) {
-  return (
-    <nav className="navbar">
-      <ul className="navbar-nav">{props.children}</ul>
-    </nav>
-  );
 }
 
 function NavItem(props) {
@@ -50,7 +40,7 @@ function NavItem(props) {
 function DropdownMenu() {
   function DropdownItem(props) {
     return (
-      <a href="#" className="menu-item">
+      <a className="menu-item">
         <span className="icon-button">{props.leftIcon}</span>
         {props.children}
       </a>
@@ -61,13 +51,13 @@ function DropdownMenu() {
     <div className="dropdown">
         <div className="menu">
           <Link to="/">
-          <DropdownItem leftIcon={<HomeIcon/>}>Home</DropdownItem>
+          <DropdownItem leftIcon={<HomeIcon/>} children="Home"/>
           </Link>
           <Link to={{pathname:"/about"}}>
-          <DropdownItem leftIcon={<AboutIcon/>}>About us</DropdownItem>
+          <DropdownItem leftIcon={<AboutIcon/>} children="About us"/>
           </Link>
           <Link to={{pathname:"/contact"}}>
-          <DropdownItem leftIcon={<ContactIcon/>}>Contact us</DropdownItem>
+          <DropdownItem leftIcon={<ContactIcon/>} children="Contact us"/>
           </Link>
         </div>
 
